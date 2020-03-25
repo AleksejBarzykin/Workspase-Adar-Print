@@ -1,0 +1,5 @@
+{
+  "projectManager.any.maxDepthRecursion": 4,
+"sync.autoUpload": true,
+"git.ignoreLimitWarning": true
+}

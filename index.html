@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- Язык содеримого страницы -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других выжных данных (не отображается) -->
+
+<head>
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<!-- Заголовок страницы в браузере -->
+	<title>Workspace Adar Print</title>
+	<!-- ! SEO -->
+	<!-- Краткое описание страницы (до 140 символов) -->
+	<meta name="description" content="Рабочее простанство Adar Print">
+	<!-- Ключевые слова страницы (не больше 20 слов) -->
+	<meta name="keyword" content="Техкарта, рабочее пространство, adar print, адар принт">
+	<!-- ! Управление доступом поисковых роботов к странице -->
+	<!-- Запрет индексации изображений и ссылок  -->
+	<!-- <meta name="robots" content="noimageindex, nofollow"> -->
+	<!-- ? Запрет индексации страницы полностью -->
+	<meta name="robots" content="none">
+
+	<!-- ! Технические -->
+	<!-- Автор страницы -->
+	<meta name="Author" content="Алексей">
+	<!-- Авторские права -->
+	<meta name="Copyright" content="Алексей">
+	<!-- Адрес автора -->
+	<meta name="Address" content="Харьков">
+	<!-- Редирект (перезагрузка) страницы-->
+	<!-- Задержка в секундах; content="S; url=Адрес сайта/страниы" -->
+	<!-- <meta http-equiv="refresh" content="0; url="> -->
+
+	<!-- ! Социальные сети -->
+	<!-- локализация сайта, для русскоязычного сайта ru_RU -->
+	<meta property="og:locale" content="ru_RU">
+	<!-- тип контента, по умолчанию используется article -->
+	<meta property="og:type" content="article">
+	<!-- заголовок страницы, который будет выводится в записи социальной сети -->
+	<meta property="og:title" content="Workspace Adar Print">
+	<!-- описание страницы -->
+	<meta property="og:description" content="Рабочее пространство">
+	<!-- ссылка на изображение, которое будет публиковаться в записи -->
+	<meta property="og:image" content="http://">
+	<!-- ссылка на текущую страницу -->
+	<meta property="og:url" content="http://">
+	<!-- название сайта -->
+	<meta property="og:site_name" content="Workspace Adar Print">
+
+	<!-- Тип карты, по умолчанию используется summary -->
+	<meta name="twitter:card" content="summary">
+	<!-- Имя/логин автора -->
+	<meta name="twitter:site" content="Жека">
+	<!-- Название страницы -->
+	<meta name="twitter:title" content="META теги">
+	<!-- Описание страницы -->
+	<meta name="twitter:description" content="про META теги">
+	<!-- Cсылка на изображение -->
+	<meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg">
+
+	<!-- Адаптивность -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Отключает форматирование ссылки у номера телефона на IOS -->
+	<meta name="format-detection" content="telephone=none">
+	<!-- Шрифты -->
+	<link htef=<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap&subset=cyrillic"
+		rel="stylesheet">>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+	<!-- Сброс стилей по умолчанию (reset.css) -->
+	<link rel="stylesheet" href="src/css/reset.css">
+	<!-- Кастомний стиль -->
+	<link rel="stylesheet" href="build/css/style.min.css">
+</head>
+
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="tit">
+		<h1>Техкарта</h1>
+	</div>
+
+	<!-- TODO -------- Блок с основными параметрами заказа --------->
+	<div>
+		<div id="bigg" class="bigg"></div>
+	</div>
+
+	<!-- TODO -------- Блок с описанием тех. процесса --------->
+	<!-- TODO Первая линия (заготовка, тиснение, высечка)-->
+	<div class="wrapper">
+		<!-- ! Заготовка материала -->
+		<div class="container">
+			<button class="container-title">Заготовка материала</button>
+			<div class="item discr-item">
+				<input type="text" disabled class="inp1" placeholder="Наименование:">
+				<input type="text" disabled class="inp1" placeholder="Формат закупки:">
+				<input type="text" disabled class="inp1" placeholder="Формат флатовки:">
+				<input type="text" disabled class="inp1" placeholder="Формат печати:">
+				<input type="text" disabled class="inp1" placeholder="Кол-во закуп. листов:">
+				<input type="text" disabled class="inp1" placeholder="Кол-во печ. листов:">
+			</div>
+			<div class="item value-item">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2 drop-select" name="myName" list="spurchase-format">
+				<!-- и где-то на странице следующий блок (и не обязательно внутри формы)-->
+				<datalist id="spurchase-format">
+					<option value="105 роль">
+					<option value="102 роль">
+					<option value="70 х 100">
+					<option value="70 х 50">
+					<option value="64 х 90">
+					<option value="64 х 45">
+				</datalist>
+				<div class="double-value-item">
+					<input type="text" class="double-inp">
+					<input type="text" class="double-inp" placeholder="x" disabled>
+					<input type="text" class="double-inp">
+				</div>
+				<div class="double-value-item">
+					<input type="text" class="double-inp">
+					<input type="text" class="double-inp" placeholder="x" disabled>
+					<input type="text" class="double-inp">
+				</div>
+				<input type="text" class="inp2 purchase-sheets">
+				<input type="text" class="inp2 printed-sheets">
+			</div>
+		</div>
+		<!-- ! Тиснение фольгой -->
+		<div class="container">
+			<button class="container-title">Тиснение фольгой</button>
+			<div class="item discr-item">
+				<input type="text" disabled class="inp1" placeholder="Название:">
+				<input type="text" disabled class="inp1" placeholder="Цвет фольги:">
+				<input type="text" disabled class="inp1" placeholder="Кол-во фольги:">
+				<input type="text" disabled class="inp1" placeholder="Кол-во прогонов:">
+				<input type="text" disabled class="inp1" placeholder="Тех. нужды:">
+				<input type="text" disabled class="inp1" placeholder="Тираж:">
+			</div>
+			<div class="item value-item">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2 purchase-sheets">
+				<input type="text" class="inp2 printed-sheets">
+			</div>
+		</div>
+		<!-- ! Высечка -->
+		<div class="container">
+			<button class="container-title">Высечка</button>
+			<div class="item discr-item">
+				<input type="text" disabled class="inp1" placeholder="Щтанформа:">
+				<input type="text" disabled class="inp1" placeholder="№ штанцформы:">
+				<input type="text" disabled class="inp1" placeholder="Тираж:">
+				<input type="text" disabled class="inp1" placeholder="Тех. нужды:">
+			</div>
+			<div class="item value-item">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2 purchase-sheets">
+				<input type="text" class="inp2 printed-sheets">
+			</div>
+		</div>
+	</div>
+	<!-- TODO Вторая линия (печать, лакировка, склейка) -->
+	<div class="wrapper">
+		<!-- ! Печать -->
+		<div class="container">
+			<button class="container-title">Печать</button>
+			<div class="item discr-item">
+				<input type="text" disabled class="inp1" placeholder="Красочносить:">
+				<input type="text" disabled class="inp1" placeholder="Расшифровка:">
+				<input type="text" disabled class="inp1" placeholder="Тираж:">
+				<input type="text" disabled class="inp1" placeholder="Тех. нужды:">
+			</div>
+			<div class="item value-item">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2 purchase-sheets">
+				<input type="text" class="inp2 printed-sheets">
+			</div>
+		</div>
+		<!-- ! УФ-лакировка -->
+		<div class="container">
+			<button class="container-title">УФ-лакировка</button>
+			<div class="item discr-item">
+				<input type="text" disabled class="inp1" placeholder="Сито:">
+				<input type="text" disabled class="inp1" placeholder="Тираж:">
+				<input type="text" disabled class="inp1" placeholder="Тех. нужды:">
+			</div>
+			<div class="item value-item">
+				<input type="text" class="inp1" placeholder="Новое / Старое" style="text-align: center;">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+			</div>
+		</div>
+		<!-- ! Склейка -->
+		<div class="container">
+			<button class="container-title">Склейка</button>
+			<div class="item discr-item">
+				<input type="text" disabled class="inp1" placeholder="Кол-во точек:">
+				<input type="text" disabled class="inp1" placeholder="Вид клея:">
+				<input type="text" disabled class="inp1" placeholder="Тираж:">
+				<input type="text" disabled class="inp1" placeholder="Тех. нужды:">
+			</div>
+			<div class="item value-item">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+				<input type="text" class="inp2">
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="build/js/main.min.js"></script>
+</body>
+
+</html>
