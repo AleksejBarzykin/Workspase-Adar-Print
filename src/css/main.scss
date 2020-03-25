@@ -37,8 +37,21 @@ body {
 .btn-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
   max-width: 1440px;
   margin: 0 auto;
+  .btn-list__title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #222;
+    border-radius: 3px;
+    padding: 7px 24px;
+    margin-bottom: 2px;
+    background: $color-btn-container-title;
+    user-select: none;
+  }
 }
 
 .tit {
