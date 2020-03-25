@@ -27,6 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
 }
 body {
   font-family: "Comfortaa", cursive;
@@ -45,15 +46,15 @@ body {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    border: 1px solid #222;
+    border: none;
     border-radius: 3px;
-    padding: 7px 24px;
+    padding: 7px 17px;
     margin-bottom: 2px;
-    background: $color-btn-container-title;
+    background: $color-container-title;
     user-select: none;
   }
 }
-
+/***** Заголовок *****/
 .tit {
   font-size: 45px;
   font-weight: bold;
@@ -78,7 +79,7 @@ body {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -93,14 +94,16 @@ body {
   // left: 100px;
   // margin-top: 20px;
 }
-/************ ! Кнопка контейнера *************/
+/************ Кнопка контейнера *************/
 .container-title {
-  display: block;
+  display: inline-block;
+  width: 300px;
   font-size: 20px;
   font-weight: bold;
+  text-align: left;
   border: 1px solid #222;
   border-radius: 3px;
-  padding: 2px 10px;
+  padding: 4px 15px;
   margin-bottom: 2px;
   background: $color-btn-container-title;
   user-select: none;
