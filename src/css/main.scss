@@ -34,6 +34,13 @@ body {
   background-color: #f1f1f1;
 }
 
+.btn-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .tit {
   font-size: 45px;
   font-weight: bold;
