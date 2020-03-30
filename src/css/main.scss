@@ -1,28 +1,6 @@
 @import "color";
 @import "media";
 
-.bigg {
-  width: 120px;
-  height: 120px;
-  border: 1px solid #222;
-  background-color: red;
-  display: inline-block;
-  margin-top: 25px;
-  margin-left: 50px;
-  transition: 0.6s;
-  //   transform: rotate(90deg);
-}
-// .red {
-//   background-color: red;
-// }
-.green {
-  background-color: green;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  box-shadow: 0 0 25px #222;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -30,39 +8,25 @@
   font-family: "Comfortaa", cursive;
 }
 body {
-  font-family: "Comfortaa", cursive;
   //   font-family: "Roboto", sans-serif;
-  background-color: #f1f1f1;
-}
-
-.btn-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: stretch;
+  font-family: "Comfortaa", cursive;
+  background-color: #ffffff;
+  font-size: 16px;
   max-width: 1440px;
   margin: 0 auto;
-  .btn-list__title {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    padding: 7px 17px;
-    margin-bottom: 2px;
-    background: $color-container-title;
-    user-select: none;
-  }
 }
-/***** Заголовок *****/
+
+/*******************************************************/
+/********************** Заголовок **********************/
+/*******************************************************/
+
 .tit {
   font-size: 45px;
   font-weight: bold;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 280px;
   height: 60px;
-  margin-top: 10px;
   padding: 5px 0;
   background-color: #fff;
   border: 1px solid rgb(150, 150, 150);
@@ -76,92 +40,277 @@ body {
   }
 }
 
-.wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  margin-top: 10px;
+/*******************************************************/
+/******** Блок с основными параметрами заказа *********/
+/*******************************************************/
+
+.order-description {
   display: flex;
-  justify-content: space-around;
+}
+.order-description__main {
+  display: flex;
+  width: 60%;
+}
+.order-description__prefabricated {
+  display: flex;
+  width: 40%;
+  .prefabricated-line {
+    display: flex;
+    p:nth-child(-n + 3) {
+      padding-right: 2px;
+    }
+    .w40 {
+      width: 40%;
+    }
+    .w30 {
+      width: 30%;
+    }
+    .w10 {
+      width: 10%;
+    }
+    .w20 {
+      width: 20%;
+    }
+  }
+  .description-name {
+    .lab {
+      width: 60px;
+      text-align: center;
+    }
+  }
 }
 
-.container {
+.description-name {
+  .lab {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid #222;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: right;
+    padding: 4px 3px;
+    margin-bottom: 1.3px;
+  }
+  .lab:nth-child(odd) {
+    background-color: $color-container-subTitle;
+  }
+}
+
+.description-value {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 4px;
+  .double-line {
+    display: flex;
+    p {
+      width: 100%;
+      &:nth-child(1) {
+        padding-right: 2px;
+      }
+    }
+  }
+  input {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #222;
+    padding: 3px;
+    margin: 0px 0px 1.3px 2px;
+    border-radius: 3px;
+    &:focus {
+      background-color: rgba(30, 144, 255, 0.1);
+      border: 1px solid dodgerblue;
+      box-shadow: 0 0 8px 0 dodgerblue;
+    }
+    &::placeholder {
+      color: #222;
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+/******************************************************/
+/********************  КНОПКИ  ************************/
+/******************************************************/
+
+.btn-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.btn-list__title {
   display: block;
-  position: relative;
-  width: 33%;
-
-  // border: 2px solid #222;
-  // height: 300px;
-  // left: 100px;
-  // margin-top: 20px;
-}
-/************ Кнопка контейнера *************/
-.container-title {
-  display: inline-block;
-  width: 300px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  text-align: left;
-  border: 1px solid #222;
+  border: none;
   border-radius: 3px;
-  padding: 4px 15px;
+  padding: 7px 10px;
   margin-bottom: 2px;
-  background: $color-btn-container-title;
+  border: 1.5px solid $color-containerTitle_start;
+  background: $color-containerTitle_start;
+  user-select: none;
+  transition: 0.3s;
+}
+.btn-list__title:hover {
+  border: 1.5px solid #222;
+}
+.colorClick {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 7px 10px;
+  margin-bottom: 2px;
+  background: $color-containerTitle_finish;
+  border: 1.5px solid #222;
   user-select: none;
 }
 
-.item {
-  display: inline-block;
-  // border: 3px solid red;
-  position: relative;
-  width: 49%;
-  box-shadow: 0 0 10px #a3a3a3;
-}
-/************* ! Обертка списков **************/
-.item input {
-  font-size: 16px;
-  width: 100%;
-  height: 100%;
-  padding: 3px;
-  border-radius: 3px;
-  &:focus {
-    background-color: rgba(30, 144, 255, 0.1);
-    border: 1px solid dodgerblue;
-    box-shadow: 0 0 8px 0 dodgerblue;
-  }
-  &::placeholder {
-    color: #222;
-    padding: 0;
-    border: 0;
-  }
-}
-/************* ! Список описания **************/
-.inp1 {
-  text-align: right;
-  font-weight: bold;
-  background-color: #fff;
-  border: 1px solid #222;
-  margin-top: 1.5px;
-  cursor: pointer;
-  &:nth-child(odd) {
-    background-color: rgb(202, 202, 202);
-  }
-}
-/************* ! Список значений **************/
-.inp2 {
-  border: 1px solid #222;
-  margin-top: 1.5px;
-  text-align: center;
-}
-.double-value-item {
+/******************************************************/
+/********** Секция с выполняемыми оперециями **********/
+/******************************************************/
+
+.main-wrapper {
+  margin-top: 10px;
+  margin-bottom: 50px;
   display: flex;
+  justify-content: space-between;
 }
-.double-value-item .double-inp {
-  position: relative;
-  border: 1px solid #222;
-  margin-top: 1.5px;
+
+.main-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 2px;
+}
+.container-title {
+  display: inline-block;
+  width: 238px;
+  font-size: 1.25rem;
+  font-weight: bold;
   text-align: center;
-  margin-right: 1px;
-  &:nth-child(even) {
-    width: 25px;
+  border: 1px solid #222;
+  border-radius: 3px;
+  padding: 6px 15px;
+  margin: 7px 0 4px 0;
+  background: $color-btn-container-title;
+  user-select: none;
+}
+.sub-title {
+  display: inline-block;
+  width: 180px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 3px;
+  padding: 7px 0;
+  margin: 7px 0 4px 0;
+  background: $color-container-subTitle;
+  user-select: none;
+}
+
+.sub-cont {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/********************************************************/
+/************************ FIRST *************************/
+/********************************************************/
+input {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.8);
+}
+.first-block {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2px;
+  width: 50%;
+  .nomination {
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: right;
+    padding: 4px 3px;
+    margin-bottom: 1.3px;
+    &:nth-child(odd) {
+      background-color: $color-container-subTitle;
+    }
+  }
+  .inp-disabled {
+    width: 100%;
+    margin-bottom: 1.3px;
+    font-weight: bold;
   }
 }
+/********************************************************/
+/************************* SECOND ***********************/
+/********************************************************/
+.second-block {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  .inp-value {
+    width: 100%;
+    margin-bottom: 1.3px;
+  }
+  input {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #222;
+    padding: 3px;
+    border-radius: 3px;
+    &:focus {
+      background-color: rgba(30, 144, 255, 0.1);
+      border: 1px solid dodgerblue;
+      box-shadow: 0 0 8px 0 dodgerblue;
+    }
+    &::placeholder {
+      color: #222;
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+// .svg-wrapper {
+//   position: relative;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   margin: 0 auto;
+//   margin-top: 50px;
+//   width: 320px;
+// }
+// .shape {
+//   stroke-dasharray: 140 540;
+//   stroke-dashoffset: -474;
+//   stroke-width: 8px;
+//   fill: transparent;
+//   stroke: #19f6e8;
+//   border-bottom: 5px solid black;
+//   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+// }
+// .text {
+//   font-family: "Roboto Condensed";
+//   font-size: 22px;
+//   line-height: 32px;
+//   letter-spacing: 8px;
+//   text-align: center;
+//   color: rgb(255, 141, 47);
+//   top: -48px;
+//   position: relative;
+// }
+// .svg-wrapper:hover .shape {
+//   stroke-width: 2px;
+//   stroke-dashoffset: 0;
+//   stroke-dasharray: 760;
+// }
