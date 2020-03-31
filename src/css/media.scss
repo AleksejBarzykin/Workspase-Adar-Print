@@ -5,7 +5,7 @@
     margin: 10px 15px;
   }
   .container {
-    min-width: 400px;
+    //  min-width: 400px;
     margin: 0 auto;
     margin-top: 10px;
   }
@@ -14,15 +14,68 @@
 @media screen and (max-width: 768px) {
   body {
     padding: 8px;
+    position: relative;
+  }
+  .top-header {
+    position: relative;
+    flex-direction: column;
+    height: 100px;
+    .logo {
+      position: absolute;
+      left: 0;
+    }
+    h2 {
+      position: absolute;
+      left: auto;
+      top: 72px;
+    }
+    .preps {
+      margin-top: 10px;
+      position: absolute;
+      right: 5px;
+    }
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    .logo {
+      position: absolute;
+      left: 10px;
+      top: 0;
+    }
+    .head-item {
+      &:nth-child(-n + 4) {
+        margin-bottom: 4px;
+      }
+      input {
+        width: 220px;
+        text-align-last: left;
+      }
+    }
   }
   .btn-list {
     display: flex;
     flex-direction: column;
   }
 
-  .container-title {
-    padding: 0;
-    text-align: left;
+  .container {
+    .cont-title {
+      display: flex;
+      justify-content: space-between;
+    }
+    min-width: 100%;
+    .container-title {
+      font-size: 1rem;
+      text-align: center;
+      width: 50%;
+      margin-right: 2px;
+    }
+    .sub-title {
+      font-size: 1rem;
+      text-align: center;
+      width: 50%;
+    }
   }
 
   .main-wrapper {
@@ -35,13 +88,34 @@
     align-items: center;
     .order-description__main {
       min-width: 100%;
+      .comment::placeholder {
+        visibility: visible;
+        color: #000;
+        opacity: 0.3;
+      }
       .description-name {
         display: none;
+      }
+      .description-value input::placeholder {
+        visibility: visible;
+        color: #000000;
+        opacity: 0.3;
       }
     }
     .order-description__prefabricated {
       min-width: 100%;
       margin-top: 10px;
+      font-size: 0.9rem;
+      .description-name {
+        font-size: 0.8rem;
+        line-height: 1.1;
+      }
+    }
+  }
+  .first-block {
+    label {
+      font-size: 0.75rem;
+      line-height: 1.35;
     }
   }
 }

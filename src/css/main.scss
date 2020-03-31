@@ -8,35 +8,56 @@
   font-family: "Comfortaa", cursive;
 }
 body {
-  //   font-family: "Roboto", sans-serif;
   font-family: "Comfortaa", cursive;
   background-color: #ffffff;
   font-size: 16px;
   max-width: 1440px;
   margin: 0 auto;
 }
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+  .preps {
+    line-height: 1.2;
+    a {
+      text-decoration-line: none;
+    }
+  }
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px 0 10px 0;
 
-/*******************************************************/
-/********************** Заголовок **********************/
-/*******************************************************/
-
-.tit {
-  font-size: 45px;
-  font-weight: bold;
-  text-align: center;
-  margin: 10px auto;
-  width: 280px;
-  height: 60px;
-  padding: 5px 0;
-  background-color: #fff;
-  border: 1px solid rgb(150, 150, 150);
-  box-shadow: 0 0 10px #a3a3a3;
-  transition: 0.1s;
-  border-radius: 5px;
-  cursor: pointer;
-  & h1:hover {
-    font-size: 44px;
-    box-shadow: 0 0 0 #46cad3;
+  label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #222;
+    border-radius: 3px;
+    padding: 4px 10px;
+    margin-bottom: 0.5px;
+    background: $color-container-subTitle;
+  }
+  input {
+    width: 250px;
+    border: 1px solid #222;
+    border-radius: 3px;
+    text-align: center;
+    padding: 4px 10px;
+    background-color: #fff;
+  }
+  .request input {
+    padding: 6px 10px;
+  }
+  .order-number input {
+    padding: 6px 10px;
   }
 }
 
@@ -50,6 +71,19 @@ body {
 .order-description__main {
   display: flex;
   width: 60%;
+  input::placeholder {
+    visibility: hidden;
+  }
+  .comment::placeholder {
+    visibility: hidden;
+  }
+  .comment {
+    display: block;
+    margin-left: 2px;
+    border-radius: 3px;
+    border: 1px solid #222;
+    font-size: 0.9rem;
+  }
 }
 .order-description__prefabricated {
   display: flex;
@@ -102,6 +136,7 @@ body {
   flex-direction: column;
   width: 100%;
   padding-right: 4px;
+
   .double-line {
     display: flex;
     p {
@@ -121,9 +156,10 @@ body {
     &:focus {
       background-color: rgba(30, 144, 255, 0.1);
       border: 1px solid dodgerblue;
-      box-shadow: 0 0 8px 0 dodgerblue;
+      box-shadow: 0 0 5px 0 dodgerblue;
     }
     &::placeholder {
+      background-color: $color-container-subTitle;
       color: #222;
       padding: 0;
       border: 0;
@@ -188,17 +224,20 @@ body {
   flex-direction: column;
   width: 100%;
   margin: 0 2px;
+  .cont-title {
+    display: flex;
+  }
 }
 .container-title {
   display: inline-block;
   width: 238px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   border: 1px solid #222;
   border-radius: 3px;
-  padding: 6px 15px;
-  margin: 7px 0 4px 0;
+  padding: 5px 15px;
+  margin: 7px 2px 4px 0;
   background: $color-btn-container-title;
   user-select: none;
 }
@@ -210,7 +249,7 @@ body {
   text-align: center;
   border: 1px solid #222;
   border-radius: 3px;
-  padding: 7px 0;
+  padding: 6px 0;
   margin: 7px 0 4px 0;
   background: $color-container-subTitle;
   user-select: none;
@@ -227,7 +266,7 @@ body {
 /************************ FIRST *************************/
 /********************************************************/
 input {
-  box-shadow: 0 0 10px rgba(128, 128, 128, 0.8);
+  box-shadow: 0 0 3px rgba(128, 128, 128, 0.8);
 }
 .first-block {
   display: flex;
@@ -275,6 +314,7 @@ input {
       box-shadow: 0 0 8px 0 dodgerblue;
     }
     &::placeholder {
+      background-color: $color-container-subTitle;
       color: #222;
       padding: 0;
       border: 0;
