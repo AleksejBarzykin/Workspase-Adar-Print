@@ -1,0 +1,100 @@
+/*******************************************************/
+/******** Блок с основными параметрами заказа *********/
+/*******************************************************/
+
+.order-description {
+  display: flex;
+  .order-description__main {
+    display: flex;
+    width: 60%;
+    input::placeholder {
+      visibility: hidden;
+    }
+    .comment::placeholder {
+      visibility: hidden;
+    }
+    .comment {
+      display: block;
+      margin-left: 2px;
+      border-radius: 3px;
+      border: 1px solid #222;
+      font-size: 0.9rem;
+    }
+  }
+}
+/******* Поля с названием значений заказа ********/
+.description-name {
+  .lab {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid #222;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: right;
+    padding: 5px 3px;
+    margin-bottom: 1.3px;
+  }
+  .lab:nth-child(odd) {
+    background-color: $color-container-subTitle;
+  }
+}
+
+.description-value {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 4px;
+  .double-line {
+    display: flex;
+    p {
+      width: 100%;
+      &:nth-child(1) {
+        padding-right: 2px;
+      }
+    }
+  }
+  input {
+    width: 100%;
+    text-align: center;
+    padding: 4px 3px;
+    margin: 0px 0px 1.3px 2px;
+  }
+  //   .comment {
+  //     padding: 3px;
+  //     &:focus {
+  //       background-color: rgba(30, 144, 255, 0.1);
+  //       border: 1px solid dodgerblue;
+  //       box-shadow: 0 0 8px 0 dodgerblue;
+  //     }
+  //   }
+}
+
+.order-description__prefabricated {
+  display: flex;
+  width: 40%;
+  .prefabricated-line {
+    display: flex;
+    p:nth-child(-n + 3) {
+      padding-right: 2px;
+    }
+    .w40 {
+      width: 40%;
+    }
+    .w30 {
+      width: 30%;
+    }
+    .w10 {
+      width: 10%;
+    }
+    .w20 {
+      width: 20%;
+    }
+  }
+  .description-name {
+    .lab {
+      width: 60px;
+      text-align: center;
+    }
+  }
+}

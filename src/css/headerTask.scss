@@ -1,0 +1,47 @@
+/***********************************************/
+/******* Шапка с датами и номером заказа *******/
+/***********************************************/
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+  .preps {
+    line-height: 1.2;
+    a {
+      text-decoration-line: none;
+    }
+  }
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px 0 10px 0;
+  label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #222;
+    border-radius: 3px;
+    padding: 4px 10px;
+    margin-bottom: 0.5px;
+    background: $color-container-subTitle;
+  }
+  input {
+    width: 250px;
+    text-align: center;
+    padding: 4px 10px;
+    background-color: #fff;
+  }
+  .request input {
+    padding: 6px 10px;
+  }
+  .order-number input {
+    padding: 6px 10px;
+  }
+}

@@ -26,6 +26,9 @@ const styleFiles = [
 	'./src/css/media.scss',
 	'./src/css/color.scss',
 	'./src/css/buttons.scss',
+	'./src/css/mainOrderInfo.scss',
+	'./src/css/orderOperations.scss',
+	'./src/css/headerTask.scss',
 	'./src/css/main.scss'
 ]
 //Порядок подключения js файлов
