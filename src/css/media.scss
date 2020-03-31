@@ -86,22 +86,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*********** Основные параметры заказа ***********/
     .order-description__main {
       min-width: 100%;
-      .comment::placeholder {
-        visibility: visible;
-        color: #000;
-        opacity: 0.3;
-      }
+
       .description-name {
         display: none;
       }
-      .description-value input::placeholder {
-        visibility: visible;
-        color: #000000;
-        opacity: 0.3;
+      .description-value {
+        margin-bottom: 4px;
+        input {
+          padding: 6px 0;
+          margin-bottom: 3px;
+          &::placeholder {
+            visibility: visible;
+            color: #000000;
+            opacity: 0.3;
+          }
+        }
+        textarea {
+          padding: 4px;
+          &::placeholder {
+            visibility: visible;
+            color: #000;
+            opacity: 0.3;
+          }
+        }
       }
     }
+
+    /***** Секция сборный тираж*****/
+
     .order-description__prefabricated {
       min-width: 100%;
       margin-top: 10px;
@@ -112,6 +127,7 @@
       }
     }
   }
+
   .first-block {
     label {
       font-size: 0.75rem;
