@@ -13,17 +13,18 @@
 }
 body {
   font-family: "Comfortaa", cursive;
-  background-color: #ffffff;
+  background-color: #fafafa;
   font-size: 16px;
   max-width: 1440px;
   margin: 0 auto;
 }
 input {
-  //   box-shadow: 0 0 3px rgba(128, 128, 128, 0.8);
-  background-color: rgb(240, 240, 240);
+  box-shadow: 0 0 3px rgba(128, 128, 128, 0.8);
+  //   background-color: rgb(240, 240, 240);
   border: 1px solid #222;
   border-radius: 3px;
   &:hover {
+    background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     border: 1px solid dodgerblue;
   }
@@ -41,7 +42,7 @@ input {
   }
 }
 textarea {
-  padding: 3px;
+  padding: 5px;
   background-color: rgb(240, 240, 240);
   &:focus {
     background-color: rgb(255, 255, 255);

@@ -18,10 +18,11 @@
   border-radius: 3px;
   padding: 7px 10px;
   margin-bottom: 2px;
-  border: 1.5px solid $color-containerTitle_start;
-  background: $color-containerTitle_start;
+  border: 1.5px solid #ff7b7b;
+  background: #ff7b7b;
   user-select: none;
   transition: 0.3s;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 .btn-list__title:hover {
   border: 1.5px solid #222;
@@ -38,7 +39,7 @@
   border-radius: 3px;
   padding: 7px 10px;
   margin-bottom: 2px;
-  background: $color-containerTitle_finish;
+  background: #62d162;
   border: 1.5px solid #222;
   user-select: none;
   &:hover {
