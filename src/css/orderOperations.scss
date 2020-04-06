@@ -14,6 +14,18 @@
   flex-direction: column;
   width: 100%;
   margin: 0 2px;
+  .harvesting,
+  .print,
+  .lamination,
+  .hot-stamping,
+  .varnishing,
+  .cold-stamping,
+  .carve,
+  .gluing-together,
+  .cutting,
+  .packaging {
+    opacity: 0;
+  }
   .container {
     margin-bottom: 5px;
     padding-right: 5px;
